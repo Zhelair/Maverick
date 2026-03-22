@@ -1,0 +1,85 @@
+{
+  "app": {
+    "name": "Maverick",
+    "tagline": "Download audio from anywhere"
+  },
+  "login": {
+    "enter_passphrase": "Enter passphrase",
+    "access": "Access",
+    "verifying": "Verifying...",
+    "error_required": "Passphrase required",
+    "error_invalid": "Invalid passphrase"
+  },
+  "download": {
+    "placeholder": "Paste a link from YouTube, SoundCloud, TikTok...",
+    "preview": "Preview 15s",
+    "previewing": "Loading preview...",
+    "download_mp3": "Download MP3",
+    "downloading": "Downloading...",
+    "add_to_playlist": "Add to Playlist",
+    "fetching_info": "Fetching track info...",
+    "success": "Download started!",
+    "error_url": "Invalid URL",
+    "error_failed": "Download failed",
+    "error_preview": "Preview unavailable"
+  },
+  "library": {
+    "title": "Library",
+    "all_tracks": "All Tracks",
+    "favorites": "Favorites",
+    "playlists": "Playlists",
+    "new_playlist": "+ New Playlist",
+    "empty": "No tracks yet. Paste a link to get started.",
+    "sort_by": "Sort by",
+    "sort_date": "Date",
+    "sort_name": "Name",
+    "sort_artist": "Artist",
+    "sort_platform": "Platform",
+    "sort_genre": "Genre",
+    "export": "Export",
+    "search_placeholder": "Search tracks..."
+  },
+  "export": {
+    "title": "Export Tracklist",
+    "filter_all": "All",
+    "copy": "Copy to Clipboard",
+    "download_txt": "Download .TXT",
+    "export_json": "Export JSON",
+    "copied": "Copied!"
+  },
+  "player": {
+    "now_previewing": "Now Previewing",
+    "preview_label": "15s preview"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "theme_daylight": "Daylight",
+    "theme_nighttime": "Nighttime",
+    "theme_neon": "Neon",
+    "logout": "Logout"
+  },
+  "playlist": {
+    "create_title": "Create Playlist",
+    "name_placeholder": "Playlist name...",
+    "genre_placeholder": "Genre (optional)",
+    "create": "Create",
+    "cancel": "Cancel"
+  },
+  "platform": {
+    "youtube": "YouTube",
+    "soundcloud": "SoundCloud",
+    "tiktok": "TikTok",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "vk": "VK",
+    "bandcamp": "Bandcamp",
+    "other": "Other"
+  },
+  "errors": {
+    "network": "Network error. Check your connection.",
+    "rate_limit": "Too many requests. Try again later.",
+    "unsupported": "Unsupported platform"
+  }
+}

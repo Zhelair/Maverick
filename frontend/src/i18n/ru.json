@@ -1,0 +1,85 @@
+{
+  "app": {
+    "name": "Maverick",
+    "tagline": "Скачивай музыку откуда угодно"
+  },
+  "login": {
+    "enter_passphrase": "Введи пароль",
+    "access": "Войти",
+    "verifying": "Проверяем...",
+    "error_required": "Введи пароль",
+    "error_invalid": "Неверный пароль"
+  },
+  "download": {
+    "placeholder": "Вставь ссылку с YouTube, SoundCloud, TikTok...",
+    "preview": "Превью 15с",
+    "previewing": "Загрузка превью...",
+    "download_mp3": "Скачать MP3",
+    "downloading": "Скачиваем...",
+    "add_to_playlist": "В плейлист",
+    "fetching_info": "Загружаем информацию...",
+    "success": "Скачивание началось!",
+    "error_url": "Неверная ссылка",
+    "error_failed": "Ошибка скачивания",
+    "error_preview": "Превью недоступно"
+  },
+  "library": {
+    "title": "Библиотека",
+    "all_tracks": "Все треки",
+    "favorites": "Избранное",
+    "playlists": "Плейлисты",
+    "new_playlist": "+ Новый плейлист",
+    "empty": "Треков пока нет. Вставь ссылку чтобы начать.",
+    "sort_by": "Сортировка",
+    "sort_date": "По дате",
+    "sort_name": "По названию",
+    "sort_artist": "По артисту",
+    "sort_platform": "По платформе",
+    "sort_genre": "По жанру",
+    "export": "Экспорт",
+    "search_placeholder": "Поиск треков..."
+  },
+  "export": {
+    "title": "Экспорт плейлиста",
+    "filter_all": "Все",
+    "copy": "Копировать",
+    "download_txt": "Скачать .TXT",
+    "export_json": "Экспорт JSON",
+    "copied": "Скопировано!"
+  },
+  "player": {
+    "now_previewing": "Превью",
+    "preview_label": "15с превью"
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Язык",
+    "theme": "Тема",
+    "theme_daylight": "Светлая",
+    "theme_nighttime": "Тёмная",
+    "theme_neon": "Неон",
+    "logout": "Выйти"
+  },
+  "playlist": {
+    "create_title": "Создать плейлист",
+    "name_placeholder": "Название плейлиста...",
+    "genre_placeholder": "Жанр (необязательно)",
+    "create": "Создать",
+    "cancel": "Отмена"
+  },
+  "platform": {
+    "youtube": "YouTube",
+    "soundcloud": "SoundCloud",
+    "tiktok": "TikTok",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "vk": "ВКонтакте",
+    "bandcamp": "Bandcamp",
+    "other": "Другое"
+  },
+  "errors": {
+    "network": "Ошибка сети. Проверь подключение.",
+    "rate_limit": "Слишком много запросов. Попробуй позже.",
+    "unsupported": "Платформа не поддерживается"
+  }
+}

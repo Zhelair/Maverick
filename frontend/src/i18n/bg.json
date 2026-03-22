@@ -1,0 +1,85 @@
+{
+  "app": {
+    "name": "Maverick",
+    "tagline": "Свали музика от всякъде"
+  },
+  "login": {
+    "enter_passphrase": "Въведи парола",
+    "access": "Вход",
+    "verifying": "Проверяваме...",
+    "error_required": "Паролата е задължителна",
+    "error_invalid": "Невалидна парола"
+  },
+  "download": {
+    "placeholder": "Постави линк от YouTube, SoundCloud, TikTok...",
+    "preview": "Преглед 15с",
+    "previewing": "Зареждане...",
+    "download_mp3": "Свали MP3",
+    "downloading": "Свалям...",
+    "add_to_playlist": "Добави в плейлист",
+    "fetching_info": "Зареждам информация...",
+    "success": "Сваля се!",
+    "error_url": "Невалиден линк",
+    "error_failed": "Грешка при сваляне",
+    "error_preview": "Прегледът не е наличен"
+  },
+  "library": {
+    "title": "Библиотека",
+    "all_tracks": "Всички песни",
+    "favorites": "Любими",
+    "playlists": "Плейлисти",
+    "new_playlist": "+ Нов плейлист",
+    "empty": "Няма песни. Постави линк за начало.",
+    "sort_by": "Сортиране",
+    "sort_date": "По дата",
+    "sort_name": "По име",
+    "sort_artist": "По артист",
+    "sort_platform": "По платформа",
+    "sort_genre": "По жанр",
+    "export": "Експорт",
+    "search_placeholder": "Търси песни..."
+  },
+  "export": {
+    "title": "Експорт на плейлист",
+    "filter_all": "Всички",
+    "copy": "Копирай",
+    "download_txt": "Свали .TXT",
+    "export_json": "Експорт JSON",
+    "copied": "Копирано!"
+  },
+  "player": {
+    "now_previewing": "Преглед",
+    "preview_label": "15с преглед"
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Език",
+    "theme": "Тема",
+    "theme_daylight": "Дневна",
+    "theme_nighttime": "Нощна",
+    "theme_neon": "Неон",
+    "logout": "Изход"
+  },
+  "playlist": {
+    "create_title": "Създай плейлист",
+    "name_placeholder": "Име на плейлиста...",
+    "genre_placeholder": "Жанр (незадължително)",
+    "create": "Създай",
+    "cancel": "Отказ"
+  },
+  "platform": {
+    "youtube": "YouTube",
+    "soundcloud": "SoundCloud",
+    "tiktok": "TikTok",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "vk": "VK",
+    "bandcamp": "Bandcamp",
+    "other": "Друго"
+  },
+  "errors": {
+    "network": "Грешка в мрежата. Провери връзката.",
+    "rate_limit": "Твърде много заявки. Опитай по-късно.",
+    "unsupported": "Неподдържана платформа"
+  }
+}

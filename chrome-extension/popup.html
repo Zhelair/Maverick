@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maverick</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 360px;
+      min-height: 480px;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #121212;
+      color: #fff;
+      font-size: 14px;
+    }
+    :root {
+      --accent: #FF5500;
+      --surface: #1E1E1E;
+      --muted: #AAAAAA;
+      --border: #333;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #181818;
+    }
+    .logo { font-weight: 700; font-size: 16px; color: var(--accent); }
+    .wave { display: flex; align-items: flex-end; gap: 2px; height: 16px; }
+    .wave span {
+      width: 3px; background: var(--accent); border-radius: 2px;
+      animation: wave 1s ease-in-out infinite;
+    }
+    .wave span:nth-child(2) { animation-delay: .1s; }
+    .wave span:nth-child(3) { animation-delay: .2s; }
+    .wave span:nth-child(4) { animation-delay: .3s; }
+    @keyframes wave {
+      0%,100% { transform: scaleY(.4); }
+      50% { transform: scaleY(1); }
+    }
+    .section { padding: 16px; }
+    .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+    input, button { font-family: inherit; font-size: 13px; outline: none; border: none; }
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: #fff;
+      transition: border-color .2s;
+    }
+    input:focus { border-color: var(--accent); }
+    input::placeholder { color: var(--muted); }
+    .btn-primary {
+      width: 100%;
+      padding: 10px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity .2s;
+    }
+    .btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+    .btn-secondary {
+      width: 100%;
+      padding: 8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--muted);
+      cursor: pointer;
+      margin-top: 6px;
+      transition: color .2s;
+    }
+    .btn-secondary:hover { color: #fff; }
+    .metadata-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      animation: fadeIn .2s ease;
+    }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+    .thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #0a0a0a;
+      flex-shrink: 0;
+    }
+    .thumb-placeholder { width:60px;height:60px;border-radius:6px;background:#0a0a0a;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0; }
+    .meta-info { min-width: 0; flex: 1; }
+    .meta-title { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .meta-artist { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .meta-badges { display: flex; gap: 4px; margin-top: 6px; }
+    .badge { font-size: 10px; padding: 2px 6px; border-radius: 99px; font-weight: 500; }
+    .status {
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .status.error { background: #FF444422; color: #FF6666; }
+    .status.success { background: #44FF8822; color: #44FF88; }
+    .status.info { background: #4488FF22; color: #88AAFF; }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer a { color: var(--muted); font-size: 11px; text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
+    #login-section, #app-section { display: none; }
+    .passphrase-input { position: relative; }
+    .tier-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="wave">
+        <span style="height:6px"></span>
+        <span style="height:12px"></span>
+        <span style="height:16px"></span>
+        <span style="height:10px"></span>
+      </div>
+      <span class="logo">Maverick</span>
+    </div>
+    <div id="tier-display" style="display:none">
+      <span class="tier-badge" id="tier-label" style="background:#FF550022;color:#FF5500"></span>
+    </div>
+  </div>
+
+  <!-- Login -->
+  <div id="login-section" class="section">
+    <p class="label">Passphrase</p>
+    <input type="password" id="passphrase-input" placeholder="Enter your passphrase..." />
+    <button class="btn-primary" id="login-btn">Access</button>
+    <div id="login-status"></div>
+  </div>
+
+  <!-- App -->
+  <div id="app-section" class="section">
+    <p class="label">Download Audio</p>
+    <input type="url" id="url-input" placeholder="Paste URL or use current tab..." />
+    <button class="btn-secondary" id="use-tab-btn">📋 Use current tab URL</button>
+
+    <div id="metadata-area"></div>
+    <div id="download-status"></div>
+
+    <button class="btn-primary" id="get-info-btn" style="margin-top:12px;">Get Track Info</button>
+    <button class="btn-primary" id="download-btn" style="display:none;background:#1a6632;">⬇ Download MP3</button>
+  </div>
+
+  <div class="footer">
+    <a href="#" id="open-webapp">Open full app ↗</a>
+    <a href="#" id="logout-btn" style="display:none;">Logout</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
